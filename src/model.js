@@ -17,7 +17,7 @@ export default class Model {
 	create(title, callback){
 		title = title || '';
 
-		const newItem = 
+		const newItem = {
 			title: title.trim(),
 			completed: false
 		};
