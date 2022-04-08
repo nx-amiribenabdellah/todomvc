@@ -20,7 +20,7 @@
 // https://github.com/tastejs/todomvc/blob/master/tests/test.js
 // ***********************************************
 
-describe('TodoMVC', function () {
+describe('test', function () {
   // setup these constants to match what TodoMVC does
   let TODO_ITEM_ONE = 'buy some cheese'
   let TODO_ITEM_TWO = 'feed the cat'
