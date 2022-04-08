@@ -8,7 +8,7 @@ import View from './view';
 const $on = helpers.$on;
 const setView = () => todo.controller.setView(document.location.hash);
 
-class Todo 
+class Todo {
 	/**
 	 * Init new Todo List
 	 * @param  {string} The name of your list
