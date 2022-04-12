@@ -20,11 +20,6 @@ jobs:
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
-      - run: npm install -g @lhci/cli@0.8.x
-      - run: npm run build
-      - run: lhci autorun
-        env:
-          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
 
   lighthouseci:
     runs-on: ubuntu-latest
