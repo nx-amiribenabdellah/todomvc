@@ -28,7 +28,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14
-      - name: Lighthouse
+      - name: Lighthouse-testing
         uses: nx-amiribenabdellah/lighthouse-test@v1.2
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
