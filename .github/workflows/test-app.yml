@@ -20,10 +20,7 @@ jobs:
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 14
-      - run: npm install && npm install -g @lhci/cli@0.8.x
+      - run: npm install -g @lhci/cli@0.8.x
       - run: npm run build
       - run: lhci autorun
         env:
