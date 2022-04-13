@@ -19,3 +19,8 @@ jobs:
         uses: snyk/actions/node@master
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+          
+      - name: Lighthouse-testing
+        uses: nx-amiribenabdellah/lighthouse-test@v1.2
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
