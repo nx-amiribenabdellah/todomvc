@@ -36,7 +36,7 @@ jobs:
 
 
       - name: 'building the web application to be tested'
-        uses: nx-amiribenabdellah/browserstack-test@v1.3
+        uses: nx-amiribenabdellah/browserstack-test@v1.4
 
 
 
