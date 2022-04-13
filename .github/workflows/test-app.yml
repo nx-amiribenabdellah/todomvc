@@ -36,7 +36,10 @@ jobs:
 
 
       - name: 'building the web application to be tested'
-        uses: nx-amiribenabdellah/browserstack-test@v1.4
+        uses: nx-amiribenabdellah/browserstack-test@v1.6
+        with:
+          username: ${{ secrets.BROWSERSTACK_USERNAME }}
+          access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
 
 
 
