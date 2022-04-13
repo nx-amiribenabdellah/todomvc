@@ -2,8 +2,7 @@ module.exports = {
     ci: {
         collect: {
             /* Add configuration here */
-            startServerCommand: 'npm run start',
-            url: ['http://localhost:8080'],
+            staticDistDir: './',
             numberOfRuns: 3
         },
         assert: {
