@@ -32,14 +32,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: 'BrowserStack Env Setup'  # Invokes the setup-env action
+        uses: browserstack/github-actions/setup-env@master
+        with:
+          username: ${{ secrets.BROWSERSTACK_USERNAME }}
+          access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
 
 
 
       - name: 'building the web application to be tested'
-        uses: nx-amiribenabdellah/browserstack-test@v1.6
-        with:
-          username: ${{ secrets.BROWSERSTACK_USERNAME }}
-          access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+        uses: nx-amiribenabdellah/browserstack-test@v1.7
+
 
 
 
