@@ -2,8 +2,10 @@ module.exports = {
     ci: {
         collect: {
             /* Add configuration here */
-            startServerCommand: 'npm run start',
-            url: ['http://localhost:8080'],
+
+            staticDistDir: './' ,
+            //startServerCommand: 'npm run start',
+            //url: ['http://localhost:8080'],
             numberOfRuns: 3
         },
         //https://web.dev/lighthouse-ci/
