@@ -50,6 +50,9 @@ jobs:
       - name: 'Building web application to be tested'
         run: npm install
 
+      - name: 'install selenium webdriver'
+        run: npm install --save selenium-webdriver
+
       - name: 'Running application under test'
         run: ./node_modules/.bin/http-server -p 8099 &
 
