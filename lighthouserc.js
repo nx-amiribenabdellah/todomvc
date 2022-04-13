@@ -2,7 +2,7 @@ module.exports = {
     ci: {
         collect: {
             /* Add configuration here */
-            staticDistDir: './src'
+            staticDistDir: './src',
             url: ['http://localhost:8080'],
             numberOfRuns: 3
         },
