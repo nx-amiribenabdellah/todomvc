@@ -3,7 +3,6 @@ module.exports = {
         collect: {
             /* Add configuration here */
             staticDistDir: './src',
-            url: ['http://localhost:8080'],
             numberOfRuns: 3
         },
         assert: {
