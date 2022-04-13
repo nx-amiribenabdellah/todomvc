@@ -14,7 +14,7 @@ module.exports = {
         },
         upload: {
             /* Add configuration here */
-            target: 'temporary-public-storage',
+            target: 'temporary-public-storage'
         },
     },
 };
