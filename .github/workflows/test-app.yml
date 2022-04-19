@@ -51,7 +51,7 @@ jobs:
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - name: phantomjs-testing
-        uses: nx-amiribenabdellah/phantomjs-test@v1.13
+        uses: nx-amiribenabdellah/phantomjs-test@v1.14
         with:
           nameFile: 'loadspeed.js'
           link: 'http://www.google.com'
