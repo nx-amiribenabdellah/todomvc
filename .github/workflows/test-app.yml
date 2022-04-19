@@ -52,7 +52,7 @@ jobs:
       # and run all Cypress tests
       - name: phantomjs-testing
         uses: nx-amiribenabdellah/phantomjs-test@v1.7
-        
+
         
 
 
