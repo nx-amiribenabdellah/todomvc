@@ -42,4 +42,11 @@ jobs:
         uses: browserstack/github-actions/setup-local@master
         with:
           local-testing: stop
+    
+      - name: phantomjs-testing
+        uses: nx-amiribenabdellah/phantomjs-test@v1.19
+      - name: run phantomjs test
+        run: |
+          phantomjs loadspeed.js http://www.google.com
+          phantomjs screen_capture.js http://google.com
 
