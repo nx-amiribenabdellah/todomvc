@@ -51,7 +51,7 @@ jobs:
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - name: phantomjs-testing
-        uses: nx-amiribenabdellah/phantomjs-test@v1.11
+        uses: nx-amiribenabdellah/phantomjs-test@v1.12
 
         
 
