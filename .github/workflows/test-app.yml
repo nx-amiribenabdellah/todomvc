@@ -50,3 +50,9 @@ jobs:
           phantomjs loadspeed.js http://www.google.com
           phantomjs screen_capture.js http://google.com
 
+      - name: Upload math result for job 1
+        uses: actions/upload-artifact@v3
+        with:
+          name: artifacts
+          path: artifact-uploaded.txt
+
