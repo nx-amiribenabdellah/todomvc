@@ -10,6 +10,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        
+      
+        
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run
@@ -17,17 +20,20 @@ jobs:
         with:
           build: npm run build
           start: npm start
+          
+      #snyk    
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/node@master
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-          
+     
+     #lighthouse
       - name: Lighthouse-testing
         uses: nx-amiribenabdellah/lighthouse-test@v1.2
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
          
-         
+      #browserstack   
       - name: 'BrowserStack Env Setup'  # Invokes the setup-env action
         uses: browserstack/github-actions/setup-env@master
         with:
@@ -44,7 +50,8 @@ jobs:
         uses: browserstack/github-actions/setup-local@master
         with:
           local-testing: stop
-    
+          
+      #phantomjs
       - name: phantomjs-testing
         uses: nx-amiribenabdellah/phantomjs-test@v1.19
       - name: run phantomjs test
@@ -52,9 +59,5 @@ jobs:
           phantomjs loadspeed.js http://www.google.com
           phantomjs screen_capture.js http://google.com
 
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: artifacts
-          path: artifact-uploaded.txt
+
 
