@@ -1,6 +1,6 @@
 name: Cypress Tests
 
-on: 
+on:
   push:
   workflow_dispatch:
 
@@ -10,9 +10,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        
-      
-        
+
+      #unit test JEST
+      - name: unit test
+        run: |
+          cd unitTest
+          npm i jest-cli -g
+          jest
+
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run
@@ -20,20 +25,20 @@ jobs:
         with:
           build: npm run build
           start: npm start
-          
-      #snyk    
+
+      #snyk
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/node@master
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-     
+
      #lighthouse
       - name: Lighthouse-testing
         uses: nx-amiribenabdellah/lighthouse-test@v1.2
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
-         
-      #browserstack   
+
+      #browserstack
       - name: 'BrowserStack Env Setup'  # Invokes the setup-env action
         uses: browserstack/github-actions/setup-env@master
         with:
@@ -50,7 +55,7 @@ jobs:
         uses: browserstack/github-actions/setup-local@master
         with:
           local-testing: stop
-          
+
       #phantomjs
       - name: phantomjs-testing
         uses: nx-amiribenabdellah/phantomjs-test@v1.19
